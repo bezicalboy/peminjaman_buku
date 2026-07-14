@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- ======================================
-                BORROWING FORM
-    ======================================= -->
     <record id="library_borrowing_form" model="ir.ui.view">
         <field name="name">library.borrowing.form</field>
         <field name="model">library.borrowing</field>
@@ -65,9 +62,6 @@
     </record>
 
 
-    <!-- ======================================
-                BORROWING LIST
-    ======================================= -->
     <record id="library_borrowing_list" model="ir.ui.view">
         <field name="name">library.borrowing.list</field>
         <field name="model">library.borrowing</field>
@@ -87,9 +81,6 @@
     </record>
 
 
-    <!-- ======================================
-                BORROWING SEARCH
-    ======================================= -->
     <record id="library_borrowing_search" model="ir.ui.view">
         <field name="name">library.borrowing.search</field>
         <field name="model">library.borrowing</field>
@@ -125,9 +116,6 @@
     </record>
 
 
-    <!-- ======================================
-                ACTION
-    ======================================= -->
     <record id="library_borrowing_action" model="ir.actions.act_window">
         <field name="name">Peminjaman Buku</field>
         <field name="res_model">library.borrowing</field>
@@ -135,10 +123,6 @@
         <field name="search_view_id" ref="library_borrowing_search"/>
     </record>
 
-
-    <!-- ======================================
-                MENU
-    ======================================= -->
 
     <menuitem
         id="library_root"
