@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- =========================
-         CATEGORY FORM
-    ========================== -->
     <record id="library_category_form" model="ir.ui.view">
         <field name="name">library.category.form</field>
         <field name="model">library.category</field>
@@ -18,7 +15,6 @@
         </field>
     </record>
 
-    <!-- CATEGORY LIST -->
     <record id="library_category_list" model="ir.ui.view">
         <field name="name">library.category.list</field>
         <field name="model">library.category</field>
@@ -29,16 +25,12 @@
         </field>
     </record>
 
-    <!-- CATEGORY ACTION -->
     <record id="library_category_action" model="ir.actions.act_window">
         <field name="name">Kategori Buku</field>
         <field name="res_model">library.category</field>
         <field name="view_mode">list,form</field>
     </record>
 
-    <!-- =========================
-         BOOK FORM
-    ========================== -->
     <record id="library_book_form" model="ir.ui.view">
         <field name="name">library.book.form</field>
         <field name="model">library.book</field>
@@ -68,9 +60,6 @@
         </field>
     </record>
 
-    <!-- =========================
-         BOOK LIST
-    ========================== -->
     <record id="library_book_list" model="ir.ui.view">
         <field name="name">library.book.list</field>
         <field name="model">library.book</field>
@@ -86,9 +75,6 @@
         </field>
     </record>
 
-    <!-- =========================
-         BOOK SEARCH
-    ========================== -->
     <record id="library_book_search" model="ir.ui.view">
         <field name="name">library.book.search</field>
         <field name="model">library.book</field>
@@ -102,9 +88,6 @@
         </field>
     </record>
 
-    <!-- =========================
-         BOOK ACTION
-    ========================== -->
     <record id="library_book_action" model="ir.actions.act_window">
         <field name="name">Buku</field>
         <field name="res_model">library.book</field>
