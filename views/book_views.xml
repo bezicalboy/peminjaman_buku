@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- =========================
+         CATEGORY FORM
+    ========================== -->
+    <record id="library_category_form" model="ir.ui.view">
+        <field name="name">library.category.form</field>
+        <field name="model">library.category</field>
+        <field name="arch" type="xml">
+            <form string="Kategori Buku">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- CATEGORY LIST -->
+    <record id="library_category_list" model="ir.ui.view">
+        <field name="name">library.category.list</field>
+        <field name="model">library.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- CATEGORY ACTION -->
+    <record id="library_category_action" model="ir.actions.act_window">
+        <field name="name">Kategori Buku</field>
+        <field name="res_model">library.category</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- =========================
+         BOOK FORM
+    ========================== -->
+    <record id="library_book_form" model="ir.ui.view">
+        <field name="name">library.book.form</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <form string="Buku">
+                <sheet>
+
+                    <group>
+
+                        <group>
+                            <field name="name"/>
+                            <field name="author"/>
+                            <field name="isbn"/>
+                        </group>
+
+                        <group>
+                            <field name="category_id"/>
+                            <field name="total_copies"/>
+                            <field name="available_copies" readonly="1"/>
+                            <field name="active"/>
+                        </group>
+
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- =========================
+         BOOK LIST
+    ========================== -->
+    <record id="library_book_list" model="ir.ui.view">
+        <field name="name">library.book.list</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="author"/>
+                <field name="isbn"/>
+                <field name="category_id"/>
+                <field name="total_copies"/>
+                <field name="available_copies"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- =========================
+         BOOK SEARCH
+    ========================== -->
+    <record id="library_book_search" model="ir.ui.view">
+        <field name="name">library.book.search</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="author"/>
+                <field name="isbn"/>
+                <field name="category_id"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- =========================
+         BOOK ACTION
+    ========================== -->
+    <record id="library_book_action" model="ir.actions.act_window">
+        <field name="name">Buku</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="library_book_search"/>
+    </record>
+
+</odoo>
